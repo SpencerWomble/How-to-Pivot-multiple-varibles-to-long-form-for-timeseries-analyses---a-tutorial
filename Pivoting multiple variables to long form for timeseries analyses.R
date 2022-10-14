@@ -2,14 +2,14 @@
 ############################################################################
 ############################################################################
 
-# Pivoting multiple varibles to long-form for timeseries analyses
+# Pivoting multiple variables to long-form for timeseries analyses
 
 ############################################################################
 ############################################################################
 
 # This tutorial provides the code and explanations for pivoting multiple variables
 # of a wide-form timeseries data set into a long-form where each variable has its own column
-# and values within each row correspond to a specific timepoint.
+# and values within each row correspond to a specific time point.
 
 ############################################################################
 
@@ -74,6 +74,10 @@ long_form_data<- data %>%
                names_to = c("variable", "timepoint"), # we're naming these columns based on where R will separate them
                names_sep = "_") # this line tells R to separate the names into new columns when it encounters a "_" character
 print(long_form_data)
+
+# NOTE: You may want to rename your variables (at least temporarily)
+#       to match the format presented in this example. Chiefly, so 
+#       you can seperate on the "_" character.
 
 ###################################################
 
